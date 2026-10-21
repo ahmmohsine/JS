@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <h1>🛍️ Mon catalogue de produits</h1>
+  <ul id="catalogue">
+  </ul>
+  <p id="resume"></p>
+  <script type="module" src="src/script.js" defer></script>
+  <button id="tous">Tous</button>
+  <button id="enStock">En stock</button>
+  <button id="prixCroissant">Prix croissant</button>
+  <button id="prixDecroissant">Prix décroissant</button>
+  <button id="nomAZ">Nom A→Z</button>
+  <div style="margin-top: 20px;">
+     <input id="searchText" type="search"/> 
+  <button id="searchButton">Rechercher</button>
+  <div style="margin-top: 20px;">
+    <label for="nom">Nom : </label>  <input id="nom" type="text"/>
+    <label for="prix">Prix : </label>  <input id="prix" type="text"/>
+    <label for="stock">Stock : </label>  <input id="stock" type="number"/>
+    <button id="addButton">Ajouter</button>
+  </div>
+  </div>
+ 
+</body>
+</html>

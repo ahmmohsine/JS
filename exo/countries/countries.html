@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Découverte des pays</title>
+
+    <link rel="stylesheet" href="countries.css">
+    <script src="countries.js" type="module" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alphabrate/popupjs/pu.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alphabrate/popupjs/pu.min.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="globe">🌍</div>
+        <h1>Explore le monde</h1>
+        <p>Découvre les pays et leurs secrets.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="search-section">
+            <label for="country-search">Quel pays souhaites-tu découvrir ?</label>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="country-search"
+                    placeholder="Ex. : Canada, Belgique, Maroc..."
+                >
+
+                <button id="search-button" type="button">
+                    Rechercher
+                </button>
+            </div>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section class="country-card" aria-live="polite">
+
+            <div class="country-header">
+                <div>
+                    <span class="badge">Fiche pays</span>
+                    <h2 id="nom">Pays</h2>
+                    <p id="nom-local">Découvrez ce pays</p>
+                </div>
+
+                <img
+                    id="drapeau"
+                    src="img/drapeaux.jpg"
+                    alt="Drapeau du pays">
+            </div>
+
+            <div class="country-content">
+
+                <div class="country-illustration">
+                    <span class="decoration decoration-one"></span>
+                    <span class="decoration decoration-two"></span>
+
+                    <img
+                        id="image" 
+                         src="img/drapeaux.jpg"
+                        alt="Illustration du pays" >
+                </div>
+
+                <div class="country-info">
+
+                    <div class="info-item">
+                        <span class="info-icon">🏛️</span>
+                        <div>
+                            <p>Capitale</p>
+                            <h3 id="capitale">—</h3>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">👥</span>
+                        <div>
+                            <p>Population</p>
+                            <h3 id="population">—</h3>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">🌎</span>
+                        <div>
+                            <p>Continent</p>
+                            <h3 id="continent">—</h3>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">💰</span>
+                        <div>
+                            <p>Monnaie</p>
+                            <h3 id="monnaie">—</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer class="country-footer">
+                <span>🌐 Un monde à explorer</span>
+                <span id="region">Pays</span>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <footer class="page-footer">
+        Projet JavaScript · Fetch API · Rest Countries
+    </footer>
+
+</body>
+</html>

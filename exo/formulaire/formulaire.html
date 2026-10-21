@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="stylesheet" href="formulaire.css"/>
+  <script type="module" src="formulaire.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <title>Formulaire</title>
+</head>
+
+<body>
+  <form class="formulaire" action="#" method="post" id="formulaireId">
+    <h1>Inscription</h1>
+
+    <div class="champ">
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="prenom" required>
+      <label for="prenom" id="prenomError"  class="error"></label>
+    </div>
+
+    <div class="champ">
+      <label for="age">Âge</label>
+      <input type="number" id="age" name="age" min="1" required>
+      <label for="prenom" id="ageError"  class="error"></label>
+    </div>
+
+    <div class="champ">
+      <label for="pays">Pays</label>
+      <select id="pays" name="pays" required>
+        <option value="">Choisissez un pays</option>
+        <option value="france">France</option>
+        <option value="belgique">Belgique</option>
+        <option value="canada">Canada</option>
+      </select>
+    </div>
+
+    <div class="champ conditions">
+      <input type="checkbox" id="conditions" name="conditions" required>
+      <label for="conditions">J’accepte les conditions d’utilisation</label>
+    </div>
+
+    <button type="submit">Envoyer</button>
+  </form>
+  <div id="result" class="hidden">
+
+  </div>
+</body>
+</html>

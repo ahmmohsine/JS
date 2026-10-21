@@ -1,0 +1,218 @@
+
+/* =========================
+   1. Style général
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #2c3e50;
+    margin: 0;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   2. Catalogue
+========================= */
+
+#catalogue {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#catalogue li {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    border-left: 5px solid #27ae60;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    line-height: 1.6;
+}
+
+#catalogue li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Produits en rupture de stock */
+
+#catalogue li.rupture {
+    border-left-color: #e74c3c;
+    background-color: #fff8f8;
+}
+
+/* =========================
+   3. Boutons
+========================= */
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 11px 16px;
+    margin: 4px;
+    background-color: #3498db;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #217dbb;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Bouton Supprimer */
+
+#catalogue li button {
+    background-color: #e74c3c;
+    margin: 0;
+    align-self: flex-start;
+}
+
+#catalogue li button:hover {
+    background-color: #c0392b;
+}
+
+/* =========================
+   4. Barre des filtres
+========================= */
+
+body > button {
+    margin-top: 10px;
+}
+
+/* =========================
+   5. Recherche et formulaire
+========================= */
+
+input {
+    padding: 11px 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 7px;
+    font-size: 14px;
+    background-color: white;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+input[type="search"] {
+    width: 250px;
+    max-width: 100%;
+}
+
+/* Formulaire d'ajout */
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+#nom,
+#prix,
+#stock {
+    width: 130px;
+    margin: 5px;
+}
+
+/* Bouton Ajouter */
+
+#addButton {
+    background-color: #27ae60;
+}
+
+#addButton:hover {
+    background-color: #219150;
+}
+
+/* Bouton Rechercher */
+
+#searchButton {
+    background-color: #8e44ad;
+}
+
+#searchButton:hover {
+    background-color: #71368a;
+}
+
+/* =========================
+   6. Résumé du stock
+========================= */
+
+#resume {
+    background-color: #eaf2f8;
+    color: #2c3e50;
+    border-radius: 10px;
+    padding: 18px;
+    margin-top: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #d6eaf8;
+}
+
+/* =========================
+   7. Responsive : mobile
+========================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    #catalogue {
+        grid-template-columns: 1fr;
+    }
+
+    input[type="search"] {
+        width: 100%;
+    }
+
+    #nom,
+    #prix,
+    #stock {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    button {
+        margin: 5px 2px;
+    }
+}
