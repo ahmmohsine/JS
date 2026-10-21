@@ -1,0 +1,151 @@
+/* ============================================================
+   Réservation de cinéma — feuille de style
+   Visuel clair et simple, sans classes : seuls les éléments
+   et les id déjà présents dans le HTML sont ciblés.
+   ============================================================ */
+
+/* ---------- Couleurs ---------- */
+:root {
+    --fond: #f5f6f8;
+    --carte: #ffffff;
+    --texte: #222831;
+    --texte-doux: #6b7280;
+    --bordure: #dde1e6;
+    --accent: #c0392b;        /* rouge cinéma */
+    --accent-fonce: #a93226;
+}
+
+/* ---------- Page ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 560px;
+    margin: 40px auto;
+    padding: 0 16px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+    color: var(--texte);
+    background-color: var(--fond);
+}
+
+h1 {
+    margin-bottom: 4px;
+    font-size: 1.8rem;
+    color: var(--accent);
+}
+
+/* ---------- Compte à rebours ---------- */
+#compte-a-rebours {
+    margin-top: 0;
+    font-size: 0.9rem;
+    color: var(--texte-doux);
+}
+
+/* ---------- Formulaire ---------- */
+form {
+    padding: 20px;
+    background-color: var(--carte);
+    border: 1px solid var(--bordure);
+    border-radius: 8px;
+}
+
+form br {
+    display: none;           /* l'espacement est géré par les labels */
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    padding: 8px 10px;
+    font: inherit;
+    font-weight: normal;
+    border: 1px solid var(--bordure);
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* ---------- Boutons ---------- */
+button {
+    padding: 8px 16px;
+    font: inherit;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent-fonce);
+}
+
+form button {
+    width: 100%;
+    margin-top: 4px;
+}
+
+/* ---------- Message ---------- */
+#message {
+    min-height: 1.5em;       /* évite que la page « saute » quand le message apparaît */
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* ---------- Liste des réservations ---------- */
+#reservations {
+    padding: 0;
+    list-style: none;
+}
+
+#reservations li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding: 10px 14px;
+    background-color: var(--carte);
+    border: 1px solid var(--bordure);
+    border-radius: 6px;
+}
+
+/* Bouton « Annuler » (version bonus) : plus discret */
+#reservations li button {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    color: var(--accent);
+    background-color: transparent;
+    border: 1px solid var(--accent);
+}
+
+#reservations li button:hover {
+    color: #ffffff;
+    background-color: var(--accent);
+}
+
+/* ---------- Total ---------- */
+#total {
+    padding-top: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: right;
+    border-top: 2px solid var(--bordure);
+}
